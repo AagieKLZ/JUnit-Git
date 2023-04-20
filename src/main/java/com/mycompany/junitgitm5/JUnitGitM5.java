@@ -12,8 +12,5 @@ package com.mycompany.junitgitm5;
 public class JUnitGitM5 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        Math.sqrt(4);
-        System.out.println(Math.sqrt(2));
     }
 }

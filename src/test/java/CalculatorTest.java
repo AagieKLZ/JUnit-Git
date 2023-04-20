@@ -20,20 +20,40 @@ public class CalculatorTest {
     public CalculatorTest() {
     }
 
-    @org.junit.jupiter.api.BeforeAll
+    @BeforeAll
     public static void setUpClass() throws Exception {
     }
 
-    @org.junit.jupiter.api.AfterAll
+    @AfterAll
     public static void tearDownClass() throws Exception {
     }
 
-    @org.junit.jupiter.api.BeforeEach
+    @BeforeEach
     public void setUp() throws Exception {
     }
 
-    @org.junit.jupiter.api.AfterEach
+    @AfterEach
     public void tearDown() throws Exception {
+    }
+    
+    @Test
+    public void checkLogBase0() {
+        assertEquals(Calculator.nlog(0, 1), -1);
+    }
+    
+    @Test
+    public void checkLogValid(){
+        assertEquals(Calculator.nlog(10, 1), 0);
+    }
+    
+    @Test
+    public void checkLogE(){
+        assertEquals(Calculator.nlog(Math.E, Math.E), 1);
+    }
+    
+    @Test
+    public void checkLogNegative(){
+        assertEquals(Calculator.nlog(10, -1), -1);
     }
 
     @Test
@@ -54,4 +74,5 @@ public class CalculatorTest {
         result = Calculator.squareRoot(number);
         assertEquals(expResult, result, 0.0);
     }
+   
 }

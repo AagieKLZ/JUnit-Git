@@ -16,4 +16,9 @@ public class Calculator {
     public static double squareRoot(double number) {
         return number < 0 ? -1 : Math.sqrt(number);
     }
+    public static double nlog(double base, double num){
+        if (base <= 0 || num < 1) return -1;
+        return Math.log(num) / Math.log(base);
+    }
 }
+

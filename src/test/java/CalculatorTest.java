@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 
+import com.mycompany.junitgitm5.Calculator;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,25 +20,40 @@ public class CalculatorTest {
     public CalculatorTest() {
     }
 
-    @org.junit.jupiter.api.BeforeAll
+    @BeforeAll
     public static void setUpClass() throws Exception {
     }
 
-    @org.junit.jupiter.api.AfterAll
+    @AfterAll
     public static void tearDownClass() throws Exception {
     }
 
-    @org.junit.jupiter.api.BeforeEach
+    @BeforeEach
     public void setUp() throws Exception {
     }
 
-    @org.junit.jupiter.api.AfterEach
+    @AfterEach
     public void tearDown() throws Exception {
     }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    
+    @Test
+    public void checkLogBase0() {
+        assertEquals(Calculator.nlog(0, 1), -1);
+    }
+    
+    @Test
+    public void checkLogValid(){
+        assertEquals(Calculator.nlog(10, 1), 0);
+    }
+    
+    @Test
+    public void checkLogE(){
+        assertEquals(Calculator.nlog(Math.E, Math.E), 1);
+    }
+    
+    @Test
+    public void checkLogNegative(){
+        assertEquals(Calculator.nlog(10, -1), -1);
+    }
+   
 }

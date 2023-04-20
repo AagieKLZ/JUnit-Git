@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author alumne
  */
 public class CalculatorTest {
-    
+
     public CalculatorTest() {
     }
 
@@ -54,6 +54,25 @@ public class CalculatorTest {
     @Test
     public void checkLogNegative(){
         assertEquals(Calculator.nlog(10, -1), -1);
+    }
+
+    @Test
+    public void testSquareRoot() {
+        System.out.println("squareRoot");
+        double number = 4.0;
+        double expResult = 2.0;
+        double result = Calculator.squareRoot(number);
+        assertEquals(expResult, result, 0.0);
+
+        number = -4.0;
+        expResult = -1.0;
+        result = Calculator.squareRoot(number);
+        assertEquals(expResult, result, 0.0);
+
+        number = 0.0;
+        expResult = 0.0;
+        result = Calculator.squareRoot(number);
+        assertEquals(expResult, result, 0.0);
     }
    
 }
